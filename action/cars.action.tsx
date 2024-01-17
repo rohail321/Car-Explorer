@@ -9,7 +9,6 @@ export const fetchCars = async ({
   fuel,
   limit,
 }: SearchParams) => {
-  console.log(manufacturer, modal, year, fuel, limit);
   const url = `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=${modal}&make=${manufacturer}&year=${year}&fuel=${fuel}&limit=${limit} `;
   const options = {
     method: "GET",
