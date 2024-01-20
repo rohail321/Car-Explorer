@@ -13,7 +13,7 @@ export const fetchCars = async ({
   const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "84a6060cfemshd253f1195060d9ep11c908jsn284e1c382d3f",
+      "X-RapidAPI-Key": process.env.NEXT_PUBLIC_API_KEY || "",
       "X-RapidAPI-Host": "cars-by-api-ninjas.p.rapidapi.com",
     },
   };
