@@ -25,4 +25,19 @@ export interface SearchParams {
   year: number;
   fuel: string;
   limit: number;
+  pageNumber?: number;
+}
+export interface OptionProps {
+  title: string;
+  value: string;
+}
+
+export interface CustomFilterProps {
+  type: string;
+  options: OptionProps[];
+}
+
+export interface ShowMoreProps {
+  pageNumber: number;
+  isNext: boolean;
 }

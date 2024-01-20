@@ -1,8 +1,13 @@
 import { fetchCars } from "@/action/cars.action";
-import { Hero, CustomFilter, SearchBar, CarCard } from "@/components/";
+import {
+  Hero,
+  CustomFilter,
+  SearchBar,
+  CarCard,
+  ShowMore,
+} from "@/components/";
+import { fuels, yearsOfProduction } from "@/constant";
 import { SearchParams } from "@/types";
-{
-}
 
 export default async function Home({
   searchParams,
@@ -29,8 +34,8 @@ export default async function Home({
         <div className='home__filters'>
           <SearchBar />
           <div className='home__filter-container'>
-            <CustomFilter title='fuel' />
-            <CustomFilter title='year' />
+            <CustomFilter type='fuel' options={fuels} />
+            <CustomFilter type='year' options={yearsOfProduction} />
           </div>
         </div>
         {!isDataEmpty ? (
@@ -40,6 +45,10 @@ export default async function Home({
                 <CarCard car={car} />
               ))}
             </div>
+            <ShowMore
+              pageNumber={(searchParams.limit || 10) / 10}
+              isNext={(searchParams.limit + 1 || 11) > result.length}
+            />
           </section>
         ) : (
           <div className='home__error-container'>

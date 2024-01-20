@@ -9,7 +9,7 @@ export const fetchCars = async ({
   fuel,
   limit,
 }: SearchParams) => {
-  const url = `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=${modal}&make=${manufacturer}&year=${year}&fuel=${fuel}&limit=${limit} `;
+  const url = `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=${modal}&make=${manufacturer}&year=${year}&fuel_type=${fuel}&limit=${limit} `;
   const options = {
     method: "GET",
     headers: {

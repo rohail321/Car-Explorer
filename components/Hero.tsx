@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { Button } from "@/components";
+import Link from "next/link";
 function Hero() {
   const handleScroll = (): void => {
     window.scrollTo({});
@@ -16,12 +17,15 @@ function Hero() {
           Streamline your car rental experience with our effortless booking
           process
         </p>
-        <Button
-          title='Explore Cars!'
-          type='button'
-          containerStyles='bg-primary-blue text-white rounded-full mt-10'
-          handleClick={handleScroll}
-        />
+        <Link href='#discover'>
+          {" "}
+          <Button
+            title='Explore Cars!'
+            type='button'
+            containerStyles='bg-primary-blue text-white rounded-full mt-10'
+            handleClick={handleScroll}
+          />
+        </Link>
       </div>
 
       <div className='hero__image-container'>

@@ -32,9 +32,6 @@ export default function SearchBar() {
     const newPathname = `${
       window.location.pathname
     }?${searchParams.toString()}`;
-    console.log(window.location.search);
-    console.log(new URLSearchParams(window.location.search));
-    console.log(window.location.pathname);
     router.push(newPathname);
   };
 

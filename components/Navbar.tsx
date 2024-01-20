@@ -16,11 +16,6 @@ export default function Navbar() {
             className='object-contain'
           />
         </Link>
-        <Button
-          title='Sign In'
-          type='button'
-          containerStyles='text-primary-blue rounded-full bg-white min-w-[130px]'
-        />
       </nav>
     </header>
   );
